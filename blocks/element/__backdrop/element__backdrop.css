@@ -1,0 +1,8 @@
+.element__backdrop {
+    max-width: 282px;
+    max-height: 361px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}

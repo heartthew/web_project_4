@@ -1,0 +1,13 @@
+.header__vector {
+    display: flex;
+    max-width: 173px;
+    margin: 0 auto auto 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .header__vector {
+        max-width: 126px;
+        margin: 0 auto auto 27px;
+    }
+}
