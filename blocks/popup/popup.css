@@ -1,0 +1,16 @@
+@import url(__overlay/popup__overlay.css);
+.popup {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    width: 880px;
+    top: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 425px) {
+    .popup {
+        width: 320px;
+    }
+}

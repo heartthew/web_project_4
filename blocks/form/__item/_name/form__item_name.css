@@ -1,0 +1,5 @@
+    .form__item_name {}
+    
+    @media screen and (max-width: 425px) {
+        .form__item_name {}
+    }

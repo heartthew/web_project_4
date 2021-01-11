@@ -1,0 +1,15 @@
+.form__backdrop {
+    display: flex;
+    position: absolute;
+    object-fit: none;
+    width: 430px;
+    height: 330px;
+    z-index: -1;
+    padding: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .form__backdrop {
+        transform: matrix(.6558, 0, 0, .97575757, 0, 0);
+    }
+}

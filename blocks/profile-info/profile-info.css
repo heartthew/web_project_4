@@ -3,7 +3,8 @@
 @import url(../profile-info/__edit-button/profile-info__edit-button.css);
 .profile-info {
     display: flex;
-    max-width: 415px;
+    min-width: 415px;
+    max-width: 555px;
     height: 77px;
     flex-wrap: wrap;
     margin: auto 0;

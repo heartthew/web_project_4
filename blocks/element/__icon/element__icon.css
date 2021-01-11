@@ -1,7 +1,7 @@
 .element__icon {
     max-width: 20.76px;
     max-height: 18.13px;
-    transition: opacity .3s ease-in;
+    transition: opacity .24s ease-in;
 }
 
 .element__icon:hover {

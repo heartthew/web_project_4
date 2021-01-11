@@ -1,0 +1,14 @@
+.form__item {
+    width: 358px;
+    border-style: none;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .form__item {
+        width: 238px;
+    }
+}

@@ -1,9 +1,14 @@
 .add-button {
-    max-width: 150px;
+    width: 150px;
     height: 50px;
     align-self: flex-end;
     margin: auto 0 auto 172px;
     padding: 0;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    object-fit: none;
+    transition: opacity .13s ease-in;
 }
 
 .add-button:hover {
@@ -12,8 +17,7 @@
 
 @media screen and (max-width: 425px) {
     .add-button {
-        max-width: 282px;
+        width: 282px;
         margin: 36px 0 auto;
-        align-self: flex-end;
     }
 }

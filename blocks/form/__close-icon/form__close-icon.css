@@ -1,0 +1,15 @@
+.form__close-icon {
+    position: absolute;
+    top: 163px;
+    right: -34px;
+}
+
+@media screen and (max-width: 425px) {
+    .form__close-icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        top: 156px;
+        right: 0;
+    }
+}

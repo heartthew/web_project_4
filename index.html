@@ -19,6 +19,21 @@
                 <div class="header__line"></div>
             </header>
             <main class="content">
+                <section class="popup">
+                    <div class="popup__overlay"></div>
+                    <form class="form">
+                        <img class="form__close-icon" src="images/close-icon.png" alt="Close Icon">
+                        <fieldset class="form__input-container">
+                            <label class="form__label">Edit Profile</label>
+                            <input class="form__item form__item_name" id="name" value="" type="text">
+                            <div class="form__line"></div>
+                            <input class="form__item form__item_job" id="job" value="" type="text">
+                            <div class="form__line"></div>
+                            <input class="form__submit" id="save" type="submit" value="Save">
+                            <img class="form__backdrop" src="images/form-backdrop.png" alt="Form Backdrop">
+                        </fieldset>
+                    </form>
+                </section>
                 <section class="profile">
                     <img class="avatar" src="images/cousteau.png" alt="Jacques Cousteau">
                     <div class="profile-info">
@@ -28,17 +43,6 @@
                     </div>
                     <img class="add-button" src="./images/add-button.png" alt="Add Button">
                 </section>
-
-                <section class="form">
-                    <fieldset class="form__input-container">
-                        <label class="form__label" for="heading">Heading</label>
-                        <input class="form__item form__item_name" id="name" type="text">
-                        <input class="form__item form__item_occupation" id="occupation" type="text">
-                        <input class="form__submit" id="submit" type="submit">
-                    </fieldset>
-                    <img class="form__backdrop" src="images/form-backdrop.png" alt="Form Backdrop">
-                </section>
-
                 <section class="elements">
                     <div class="element">
                         <img class="element__image" src="images/yosemite.png" alt="Yosemite Valley">
@@ -75,7 +79,7 @@
                     <div class="element">
                         <img class="element__image" src="./images/vanoise.png" alt="Venoise National Park">
                         <div class="element__label">
-                            <h2 class="element__title">Vanoise Nationa...</h2>
+                            <h2 class="element__title">Vanoise National Park</h2>
                             <img class="element__icon" src="images/group-icon.png" alt="Group Icon">
                         </div>
                         <img class="element__backdrop" src="images/element-backdrop.png" alt="Item Backdrop">
@@ -95,7 +99,7 @@
             </footer>
         </div>
     </div>
-    <script></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

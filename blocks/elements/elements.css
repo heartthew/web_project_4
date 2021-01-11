@@ -6,14 +6,13 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-column-gap: 17px;
     grid-row-gap: 20px;
-    margin: 47.25px 0 0;
 }
 
 @media screen and (max-width: 425px) {
     .elements {
         max-width: 282px;
         display: flex;
-        margin: 36px auto 0;
         flex-direction: column;
+        left: 19px;
     }
 }
