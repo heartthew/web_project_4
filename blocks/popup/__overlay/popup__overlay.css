@@ -1,8 +1,7 @@
 .popup__overlay {
     background-color: #000;
     position: absolute;
-    top: -74px;
-    width: 100%;
+    width: 880px;
     height: 100vh;
     opacity: .5;
     padding: 0;
@@ -10,5 +9,7 @@
 }
 
 @media screen and (max-width: 425px) {
-    .popup__overlay {}
+    .popup__overlay {
+        width: 320px;
+    }
 }

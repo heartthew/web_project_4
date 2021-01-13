@@ -6,9 +6,9 @@
 @import url(../form/__close-icon/form__close-icon.css);
 @import url(../form/__backdrop/form__backdrop.css);
 .form {
-    position: absolute;
+    position: fixed;
     display: flex;
-    max-width: 430px;
+    width: 430px;
     flex-direction: column;
     align-self: center;
     padding: 0;
@@ -16,9 +16,7 @@
 
 @media screen and (max-width: 425px) {
     .form {
-        max-width: 282px;
-        top: -68px;
-        left: 19px;
-        align-self: unset;
+        width: 282px;
+        top: -76px;
     }
 }

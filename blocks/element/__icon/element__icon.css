@@ -5,6 +5,7 @@
 }
 
 .element__icon:hover {
+    cursor: pointer;
     opacity: .5;
 }
 

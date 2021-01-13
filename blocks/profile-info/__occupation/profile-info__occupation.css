@@ -1,7 +1,10 @@
 .profile-info__occupation {
+    width: 520px;
     font-size: 18px;
     font-weight: normal;
     line-height: 22px;
+    font-family: Inter;
+    font-style: normal;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -11,6 +14,8 @@
 
 @media screen and (max-width: 425px) {
     .profile-info__occupation {
+        width: 245px;
+        text-align: center;
         margin: 14px auto 0;
     }
 }

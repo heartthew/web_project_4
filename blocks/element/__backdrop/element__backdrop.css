@@ -1,8 +1,8 @@
 .element__backdrop {
-    max-width: 282px;
-    max-height: 361px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    width: 282px;
+    height: 361px;
+    background: url(../../../images/element-backdrop.png) no-repeat;
+    margin: 0;
+    padding: 0;
     z-index: -1;
 }

@@ -4,7 +4,7 @@
 @import url(../element/__title/element__title.css);
 @import url(../element/__backdrop/element__backdrop.css);
 .element {
-    max-height: 361px;
+    max-height: 362px;
     display: flex;
     position: relative;
     justify-content: space-evenly;
