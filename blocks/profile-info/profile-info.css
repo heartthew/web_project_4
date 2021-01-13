@@ -1,4 +1,6 @@
 @import url(../profile-info/__container/profile-info__container.css);
+@import url(../profile-info/__name/profile-info__name.css);
+@import url(../profile-info/__occupation/profile-info__occupation.css);
 .profile-info {
     display: flex;
     flex-direction: column;
