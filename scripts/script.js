@@ -8,10 +8,8 @@ let profileName = profileInfo.querySelector(".profile__name");
 let profileOccupation = profileInfo.querySelector(".profile__occupation");
 
 function openForm() {
-    let newName = document.querySelector(".form__item_input_name").value
-    newName = profileName.textContent;
-    let newJob = document.querySelector(".form__item_input_job").value
-    newJob = profileOccupation.textContent;
+    person.value = profileName.textContent;
+    job.value = profileOccupation.textContent;
     let opened = document.querySelector(".popup");
     opened.classList.add("popup_opened");
 }
