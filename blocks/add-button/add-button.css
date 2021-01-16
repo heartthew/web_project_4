@@ -9,6 +9,9 @@
     border-radius: 2px;
     object-fit: none;
     transition: opacity .13s ease-in;
+    background: url(../../images/add-button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .add-button:hover {
@@ -16,7 +19,7 @@
     opacity: .6;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .add-button {
         object-fit: none;
         margin: 36px auto auto;

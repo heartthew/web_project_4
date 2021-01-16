@@ -1,3 +1,9 @@
+@import url(../profile/__avatar/profile__avatar.css);
+@import url(../profile/__edit-button/profile__edit-button.css);
+@import url(../profile/__container/profile__container.css);
+@import url(../profile/__name/profile__name.css);
+@import url(../profile/__occupation/profile__occupation.css);
+@import url(../profile/__info/profile__info.css);
 .profile {
     display: flex;
     justify-content: flex-start;
@@ -8,7 +14,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .profile {
         max-width: 282px;
         max-height: 286px;

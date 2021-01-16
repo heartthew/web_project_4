@@ -1,6 +1,5 @@
 .form__input-container {
     width: 430px;
-    height: 330px;
     display: flex;
     border-style: none;
     align-self: center;
@@ -11,9 +10,8 @@
     padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .form__input-container {
         width: 282px;
-        height: 322px;
     }
 }

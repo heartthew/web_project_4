@@ -1,4 +1,3 @@
-@import url(../element/element.css);
 .elements {
     display: grid;
     position: relative;
@@ -7,13 +6,13 @@
     grid-column-gap: 17px;
     grid-row-gap: 20px;
     z-index: 0;
+    padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .elements {
         max-width: 282px;
         display: flex;
         flex-direction: column;
-        left: 19px;
     }
 }

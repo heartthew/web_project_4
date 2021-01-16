@@ -1,7 +1,7 @@
-# Project 4: Around The U.S.
+# Around The U.S.
 
-## Uses a simple popup interface to change text on a page .
+## Displays and edits profile information for a travelogue.
 
-### intro JS / Forms 
+### Uses HTML(grid, flex), JS(Forms, input), and CSS(style, layout). 
 
 #### https://heartthew.github.io/web_project_4/index.html 

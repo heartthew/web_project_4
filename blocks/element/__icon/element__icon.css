@@ -2,13 +2,11 @@
     max-width: 20.76px;
     max-height: 18.13px;
     transition: opacity .24s ease-in;
+    margin: 0;
+    padding: 0;
 }
 
 .element__icon:hover {
     cursor: pointer;
     opacity: .5;
-}
-
-.element__icon:active {
-    background-color: #000;
 }

@@ -1,16 +1,18 @@
-@import url(__overlay/popup__overlay.css);
+@import url(../popup/__close-icon/popup__close-icon.css);
 .popup {
     display: none;
     position: fixed;
+    background-color: rgba(0, 0, 0, .5);
     align-self: center;
     flex-direction: column;
     width: 880px;
-    top: 0;
+    height: calc(100vh + 16px);
+    top: -16px;
     padding: 0;
     z-index: 1;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .popup {
         width: 320px;
     }

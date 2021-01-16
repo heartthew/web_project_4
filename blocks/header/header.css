@@ -1,16 +1,16 @@
 @import url(../header/__vector/header__vector.css);
-@import url(../header/__line/header__line.css);
 .header {
     display: flex;
     flex-direction: column;
     max-width: 880px;
     min-height: 74px;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(54, 54, 54, .7);
     margin: 45px 0 0;
     padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .header {
         max-width: 320px;
         min-height: 56px;

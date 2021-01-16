@@ -16,10 +16,12 @@
     opacity: .8;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .form__submit {
         height: 46px;
         width: 238px;
+        font-size: 14px;
+        line-height: 17px;
         margin: 45px auto 25px;
     }
 }

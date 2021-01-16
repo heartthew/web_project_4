@@ -1,10 +1,7 @@
 @import url(../form/__input-container/form__input-container.css);
 @import url(../form/__label/form__label.css);
-@import url(../form/__line/form__line.css);
 @import url(../form/__item/form__item.css);
 @import url(../form/__submit/form__submit.css);
-@import url(../form/__close-icon/form__close-icon.css);
-@import url(../form/__backdrop/form__backdrop.css);
 .form {
     position: fixed;
     display: flex;
@@ -12,11 +9,17 @@
     flex-direction: column;
     align-self: center;
     padding: 0;
+    background: url(../../images/form-backdrop.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .form {
         width: 282px;
         top: -76px;
+        background: url(../../images/form-backdrop-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

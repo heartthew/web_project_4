@@ -15,89 +15,74 @@
     <div class="page">
         <div class="page__container">
             <header class="header">
-                <img class="header__vector" src="./images/header-vector.png" alt="Around The U.S.">
+                <img class="header__vector" src="./images/header-vector.svg" alt="Around The U.S.">
                 <div class="header__line"></div>
             </header>
             <main class="content">
-                <section class="popup">
-                    <div class="popup__overlay"></div>
-                    <form class="form">
-                        <img class="form__close-icon" src="images/close-icon.png" alt="Close Icon">
-                        <fieldset class="form__input-container">
-                            <label class="form__label">Edit Profile</label>
-                            <input class="form__item form__item_name" id="name" value="" type="text">
-                            <div class="form__line"></div>
-                            <input class="form__item form__item_job" id="job" value="" type="text">
-                            <div class="form__line"></div>
-                            <input class="form__submit" id="save" type="submit" value="Save">
-                        </fieldset>
-                        <img class="form__backdrop" src="images/form-backdrop.png" alt="Form Backdrop">
-                    </form>
-                </section>
                 <section class="profile">
-                    <img class="avatar" src="images/cousteau.png" alt="Jacques Cousteau">
-                    <div class="profile-info">
-                        <div class="profile-info__container">
-                            <h1 class="profile-info__name">Jacques Cousteau</h1>
-                            <img class="edit-button" src="./images/edit-button.png" alt="Edit Button">
+                    <img class="profile__avatar" src="images/cousteau.png" alt="Jacques Cousteau">
+                    <div class="profile__info">
+                        <div class="profile__container">
+                            <h1 class="profile__name">Jacques Cousteau</h1>
+                            <button class="profile__edit-button" aria-label="Edit" type="button"></button>
                         </div>
-                        <h2 class="profile-info__occupation">Explorer</h2>
+                        <h2 class="profile__occupation">Explorer</h2>
                     </div>
-                    <img class="add-button" src="./images/add-button.png" alt="Add Button">
+                    <button class="add-button" aria-label="Add" type="button"></button>
                 </section>
                 <section class="elements">
                     <div class="element">
-                        <div class="element__backdrop">
-                            <img class="element__image" src="images/yosemite.png" alt="Yosemite Valley">
-                            <div class="element__label">
-                                <h2 class="element__title">Yosemite Valley</h2>
-                                <img class="element__icon" src="images/group-icon.png" alt="Group Icon">
-                            </div>
+                        <img class="element__image" src="images/yosemite.jpg" alt="Yosemite Valley">
+                        <div class="element__label">
+                            <h2 class="element__title">Yosemite Valley</h2>
+                            <button class="element__button" aria-label="Group" type="button">
+                                <img class="element__icon" src="images/group-icon.svg" alt="Group Icon">
+                            </button>
                         </div>
                     </div>
                     <div class="element">
-                        <div class="element__backdrop">
-                            <img class="element__image" src="./images/louise.png" alt="Lake Louise">
-                            <div class="element__label">
-                                <h2 class="element__title">Lake Louise</h2>
-                                <img class="element__icon" src="images/group-icon.png" alt="Group Icon">
-                            </div>
+                        <img class="element__image" src="./images/louise.jpg" alt="Lake Louise">
+                        <div class="element__label">
+                            <h2 class="element__title">Lake Louise</h2>
+                            <button class="element__button" aria-label="Group" type="button">
+                                <img class="element__icon" src="images/group-icon.svg" alt="Group Icon">
+                            </button>
                         </div>
                     </div>
                     <div class="element">
-                        <div class="element__backdrop">
-                            <img class="element__image" src="./images/bald.png" alt="Bald Mountain">
-                            <div class="element__label">
-                                <h2 class="element__title">Bald Mountain</h2>
-                                <img class="element__icon" src="images/group-icon.png" alt="Group Icon">
-                            </div>
+                        <img class="element__image" src="./images/bald.jpg" alt="Bald Mountain">
+                        <div class="element__label">
+                            <h2 class="element__title">Bald Mountain</h2>
+                            <button class="element__button" aria-label="Group" type="button">
+                                <img class="element__icon" src="images/group-icon.svg" alt="Group Icon">
+                            </button>
                         </div>
                     </div>
                     <div class="element">
-                        <div class="element__backdrop">
-                            <img class="element__image" src="./images/latemar.png" alt="Latemar">
-                            <div class="element__label">
-                                <h2 class="element__title">Latemar</h2>
-                                <img class="element__icon" src="images/group-icon.png" alt="Group Icon">
-                            </div>
+                        <img class="element__image" src="./images/latemar.jpg" alt="Latemar">
+                        <div class="element__label">
+                            <h2 class="element__title">Latemar</h2>
+                            <button class="element__button" aria-label="Group" type="button">
+                                <img class="element__icon" src="images/group-icon.svg" alt="Group Icon">
+                            </button>
                         </div>
                     </div>
                     <div class="element">
-                        <div class="element__backdrop">
-                            <img class="element__image" src="./images/vanoise.png" alt="Venoise National Park">
-                            <div class="element__label">
-                                <h2 class="element__title">Vanoise National Park</h2>
-                                <img class="element__icon" src="images/group-icon.png" alt="Group Icon">
-                            </div>
+                        <img class="element__image" src="./images/vanoise.jpg" alt="Venoise National Park">
+                        <div class="element__label">
+                            <h2 class="element__title">Vanoise National Park</h2>
+                            <button class="element__button" aria-label="Group" type="button">
+                                <img class="element__icon" src="images/group-icon.svg" alt="Group Icon">
+                            </button>
                         </div>
                     </div>
                     <div class="element">
-                        <div class="element__backdrop">
-                            <img class="element__image" src="./images/lago.png" alt="Lago di Braies">
-                            <div class="element__label">
-                                <h2 class="element__title">Lago di Braies</h2>
-                                <img class="element__icon" src="images/group-icon.png" alt="Group Icon">
-                            </div>
+                        <img class="element__image" src="./images/lago.jpg" alt="Lago di Braies">
+                        <div class="element__label">
+                            <h2 class="element__title">Lago di Braies</h2>
+                            <button class="element__button" aria-label="Group" type="button">
+                                <img class="element__icon" src="images/group-icon.svg" alt="Group Icon">
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -105,9 +90,20 @@
             <footer class="footer">
                 <p class="footer__copyright">© 2020 Around The U.S.</p>
             </footer>
+            <div class="popup">
+                <button class="popup__close-icon" aria-label="Close" type="reset"></button>
+                <form class="form">
+                    <fieldset class="form__input-container">
+                        <h2 class="form__label">Edit Profile</h2>
+                        <input class="form__item form__item_input_name" id="name" required="required" placeholder="Jacques Cousteau" type="text">
+                        <input class="form__item form__item_input_job" id="job" required="required" placeholder="Explorer" type="text">
+                        <button class="form__submit" id="save" type="submit">Save</button>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

@@ -9,9 +9,8 @@
     padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 321px) {
     .form__backdrop {
-        transform: matrix(.6558, 0, 0, .97575757, 0, 0);
         top: 116px;
         align-self: center;
     }
