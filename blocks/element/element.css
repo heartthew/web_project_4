@@ -1,18 +1,19 @@
-@import url(../element/__image/element__image.css);
-@import url(../element/__label/element__label.css);
-@import url(../element/__button/element__button.css);
-@import url(../element/__icon/element__icon.css);
-@import url(../element/__title/element__title.css);
-.element {
-    display: flex;
-    position: relative;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    z-index: 0;
-    background: url(../../images/element-backdrop.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    @import url(../element/__image/element__image.css);
+    @import url(../element/__label/element__label.css);
+    @import url(../element/__button/element__button.css);
+    @import url(../element/__icon/element__icon.css);
+    @import url(../element/__title/element__title.css);
+    .element {
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        z-index: 0;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 15px;
+    }

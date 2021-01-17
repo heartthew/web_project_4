@@ -6,8 +6,8 @@
     background-repeat: no-repeat;
     background-position: center;
     padding: 0;
-    top: 148px;
-    right: 184px;
+    top: 145px;
+    right: 186px;
     border: hidden;
 }
 
@@ -20,7 +20,7 @@
     .popup__close-icon {
         width: 20px;
         height: 20px;
-        top: 92px;
+        top: 82px;
         right: 24px;
     }
 }

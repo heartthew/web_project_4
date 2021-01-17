@@ -1,8 +1,7 @@
 .profile__edit-button {
     width: 24px;
     height: 24px;
-    margin-left: 18px;
-    margin-top: 15px;
+    margin: 15px 0 0 18px;
     padding: 0;
     transition: opacity .17s ease-in;
     background: url(../../../images/edit-button.svg);
@@ -22,7 +21,7 @@
         height: 18px;
         font-size: 22px;
         line-height: 27px;
-        margin-left: 10px;
-        margin-top: 4px;
+        margin: 4px 0 0 10px;
+        background: url(../../../images/edit-button-mobile.svg);
     }
 }

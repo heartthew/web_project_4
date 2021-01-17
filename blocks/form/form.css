@@ -3,23 +3,17 @@
 @import url(../form/__item/form__item.css);
 @import url(../form/__submit/form__submit.css);
 .form {
-    position: fixed;
     display: flex;
     width: 430px;
+    height: 330px;
     flex-direction: column;
     align-self: center;
     padding: 0;
-    background: url(../../images/form-backdrop.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 @media screen and (max-width: 321px) {
     .form {
         width: 282px;
-        top: -76px;
-        background: url(../../images/form-backdrop-mobile.png);
-        background-repeat: no-repeat;
-        background-position: center;
+        height: 322px;
     }
 }

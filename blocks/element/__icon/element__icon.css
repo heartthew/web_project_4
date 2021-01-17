@@ -5,8 +5,3 @@
     margin: 0;
     padding: 0;
 }
-
-.element__icon:hover {
-    cursor: pointer;
-    opacity: .5;
-}

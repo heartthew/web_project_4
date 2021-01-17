@@ -1,8 +1,0 @@
-.element__backdrop {
-    width: 282px;
-    height: 361px;
-    background: url(../../../images/element-backdrop.png) no-repeat;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-}

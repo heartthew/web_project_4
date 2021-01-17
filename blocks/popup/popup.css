@@ -3,11 +3,10 @@
     display: none;
     position: fixed;
     background-color: rgba(0, 0, 0, .5);
-    align-self: center;
     flex-direction: column;
+    align-self: center;
     width: 880px;
-    height: calc(100vh + 16px);
-    top: -16px;
+    height: 100vh;
     padding: 0;
     z-index: 1;
 }
