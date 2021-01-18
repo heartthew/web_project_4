@@ -1,12 +1,11 @@
     @import url(../element/__image/element__image.css);
     @import url(../element/__label/element__label.css);
     @import url(../element/__button/element__button.css);
-    @import url(../element/__icon/element__icon.css);
     @import url(../element/__title/element__title.css);
     .element {
         display: flex;
-        position: relative;
-        justify-content: space-evenly;
+        max-width: 282px;
+        justify-self: center;
         align-items: center;
         flex-direction: column;
         margin: 0;

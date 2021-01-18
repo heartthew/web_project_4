@@ -5,6 +5,12 @@
     padding: 0;
 }
 
+@media screen and (max-width: 735px) {
+    .profile__avatar {
+        margin: auto 0 30px;
+    }
+}
+
 @media screen and (max-width: 321px) {
     .profile__avatar {
         margin: auto 0 30px;

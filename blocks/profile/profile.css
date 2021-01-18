@@ -9,18 +9,23 @@
     display: flex;
     justify-content: flex-start;
     max-width: 880px;
-    max-height: 120px;
     color: white;
     margin: 40px 0 51px;
     padding: 0;
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 735px) {
     .profile {
-        max-width: 282px;
-        max-height: 286px;
+        max-width: 320px;
         flex-direction: column;
         align-items: center;
+        margin: 36px auto 48px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile {
+        max-width: 282px;
         margin: 36px auto 48px;
     }
 }

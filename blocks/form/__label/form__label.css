@@ -1,5 +1,4 @@
 .form__label {
-    z-index: 3;
     width: 358px;
     text-align: left;
     font-weight: 900;
@@ -8,6 +7,7 @@
     line-height: 29px;
     margin: 34px auto 54px;
     padding: 0;
+    z-index: 3;
 }
 
 @media screen and (max-width: 321px) {
