@@ -6,16 +6,16 @@ let job = form.querySelector(".form__item_input_job");
 let closeIcon = document.querySelector(".popup__close-icon");
 let profileName = profileInfo.querySelector(".profile__name");
 let profileOccupation = profileInfo.querySelector(".profile__occupation");
-let toggle = document.querySelector(".popup");
+let popup = document.querySelector(".popup");
 
 function openForm() {
     person.value = profileName.textContent;
     job.value = profileOccupation.textContent;
-    toggle.classList.add("popup_opened");
+    popup.classList.add("popup_opened");
 }
 
 function closeForm() {
-    toggle.classList.remove("popup_opened");
+    popup.classList.remove("popup_opened");
 }
 
 function handleFormSubmit(evt) {

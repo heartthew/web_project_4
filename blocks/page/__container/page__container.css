@@ -8,7 +8,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 320px) {
     .page__container {
         max-width: 320px;
     }

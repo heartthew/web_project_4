@@ -1,4 +1,4 @@
-@import url(../page/__container/page__container.css);
+@import url(__container/page__container.css);
 .page {
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 320px) {
     .page {
         width: 320px;
     }

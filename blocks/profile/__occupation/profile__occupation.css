@@ -3,7 +3,6 @@
     font-size: 18px;
     font-weight: normal;
     line-height: 22px;
-    font-family: Inter;
     font-style: normal;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -16,5 +15,12 @@
     .profile__occupation {
         text-align: center;
         margin: 14px auto 0;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .profile__occupation {
+        font-size: 14px;
+        line-height: 17px;
     }
 }

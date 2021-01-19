@@ -78,15 +78,17 @@
                 <p class="footer__copyright">© 2020 Around The U.S.</p>
             </footer>
             <div class="popup">
-                <button class="popup__close-icon" aria-label="Close" type="reset"></button>
-                <form class="form">
-                    <fieldset class="form__input-container">
-                        <h2 class="form__label">Edit Profile</h2>
-                        <input class="form__item form__item_input_name" id="name" required="required" placeholder="Jacques Cousteau" type="text">
-                        <input class="form__item form__item_input_job" id="job" required="required" placeholder="Explorer" type="text">
-                        <button class="form__submit" id="save" type="submit">Save</button>
-                    </fieldset>
-                </form>
+                <div class="popup__container">
+                    <button class="popup__close-icon" aria-label="Close" type="button"></button>
+                    <form class="form" name="Edit Profile">
+                        <fieldset class="form__input-container">
+                            <h2 class="form__label">Edit Profile</h2>
+                            <input class="form__item form__item_input_name" id="name" required="required" placeholder="Name" name="Jacques Cousteau" type="text">
+                            <input class="form__item form__item_input_job" id="job" required="required" placeholder="Occupation" name="Explorer" type="text">
+                            <button class="form__submit" id="save" type="submit">Save</button>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

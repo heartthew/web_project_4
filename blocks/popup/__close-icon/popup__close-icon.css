@@ -6,8 +6,8 @@
     background-repeat: no-repeat;
     background-position: center;
     padding: 0;
-    top: 145px;
-    right: 186px;
+    top: -40px;
+    right: -40px;
     border: hidden;
 }
 
@@ -16,7 +16,7 @@
     opacity: .8;
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 320px) {
     .popup__close-icon {
         width: 20px;
         height: 20px;

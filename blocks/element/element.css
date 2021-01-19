@@ -1,7 +1,7 @@
-    @import url(../element/__image/element__image.css);
-    @import url(../element/__label/element__label.css);
-    @import url(../element/__button/element__button.css);
-    @import url(../element/__title/element__title.css);
+    @import url(__image/element__image.css);
+    @import url(__label/element__label.css);
+    @import url(__button/element__button.css);
+    @import url(__title/element__title.css);
     .element {
         display: flex;
         max-width: 282px;
@@ -14,5 +14,5 @@
         background-color: white;
         background-repeat: no-repeat;
         background-position: center;
-        border-radius: 15px;
+        border-radius: 10px;
     }

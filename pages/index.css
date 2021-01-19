@@ -9,6 +9,4 @@
 @import url(../blocks/element/element.css);
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/footer/footer.css);
-@import url(../blocks/form/__item/_input_job/form__item_input_job.css);
-@import url(../blocks/form/__item/_input_name/form__item_input_name.css);
 @import url(../blocks/popup/_opened/popup_opened.css);

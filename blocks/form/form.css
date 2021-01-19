@@ -1,19 +1,17 @@
-@import url(../form/__input-container/form__input-container.css);
-@import url(../form/__label/form__label.css);
-@import url(../form/__item/form__item.css);
-@import url(../form/__submit/form__submit.css);
+@import url(__input-container/form__input-container.css);
+@import url(__label/form__label.css);
+@import url(__item/form__item.css);
+@import url(__submit/form__submit.css);
 .form {
     display: flex;
     width: 430px;
-    height: 330px;
     flex-direction: column;
     align-self: center;
     padding: 0;
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 320px) {
     .form {
         width: 282px;
-        height: 322px;
     }
 }
