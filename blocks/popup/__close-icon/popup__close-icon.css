@@ -16,11 +16,11 @@
     opacity: .8;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 485px) {
     .popup__close-icon {
         width: 20px;
         height: 20px;
-        top: 82px;
-        right: 24px;
+        top: -40px;
+        right: 10px;
     }
 }

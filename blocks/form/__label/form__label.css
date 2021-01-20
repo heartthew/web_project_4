@@ -10,7 +10,7 @@
     z-index: 3;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 485px) {
     .form__label {
         width: 238px;
         font-size: 18px;
