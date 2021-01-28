@@ -14,9 +14,9 @@ const editButton = document.querySelector(".profile__edit-button");
 const addButton = document.querySelector(".profile__add-button");
 
 // Close Buttons
-const closeAdd = document.querySelector(".popup_add_close-button");
-const closeEdit = document.querySelector(".popup_edit_close-button");
-const closeImg = document.querySelector(".popup_full_close-button");
+const closeAdd = document.querySelector(".popup__close-button_type_add");
+const closeEdit = document.querySelector(".popup__close-button_type_edit");
+const closeImg = document.querySelector(".popup__close-button_type_full");
 
 const cardTemplate = document.querySelector(".element-template").content.querySelector(".element");
 
