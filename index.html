@@ -28,10 +28,7 @@
                 </div>
                 <button class="profile__add-button" aria-label="Add" type="button"></button>
             </section>
-
-            <section class="elements">
-            </section>
-
+            <section class="elements"></section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">© 2020 Around The U.S.</p>
@@ -40,9 +37,9 @@
             <div class="popup__container">
                 <button class="popup__close-button popup__full_close-button" aria-label="Close" type="button"></button>
                 <figure class="popup__figure">
-                    <img class="popup__image" src="" alt="">
+                    <img class="popup__image" src="images/close-button.svg" alt="image">
                     <figcaption class="popup__title"></figcaption>
-                    </fig>
+                </figure>
             </div>
         </div>
         <div class="popup popup_type_edit">
@@ -53,7 +50,7 @@
                         <h2 class="form__label">Edit Profile</h2>
                         <input class="form__item form__item_input_name" id="name" required="required" placeholder="Name" name="Jacques Cousteau" type="text">
                         <input class="form__item form__item_input_job" id="job" required="required" placeholder="Occupation" name="Explorer" type="text">
-                        <button class="form__submit" id="save" type="submit">Save</button>
+                        <button class="form__submit" id="edit-save" type="submit">Save</button>
                     </fieldset>
                 </form>
             </div>
@@ -66,7 +63,7 @@
                         <h2 class="form__label">New place</h2>
                         <input class="form__item form__item_input_title" id="title" required="required" placeholder="Title" type="text">
                         <input class="form__item form__item_input_image" id="image-link" required="required" placeholder="Image link" type="url">
-                        <button class="form__submit" id="save" type="submit">Create</button>
+                        <button class="form__submit" id="add-save" type="submit">Create</button>
                     </fieldset>
                 </form>
             </div>

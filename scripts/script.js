@@ -12,7 +12,6 @@ const profileInfo = document.querySelector(".profile__info");
 // Open Buttons
 const editButton = document.querySelector(".profile__edit-button");
 const addButton = document.querySelector(".profile__add-button");
-// const likeButton = element.querySelector(".element__like-button");
 
 // Close Buttons
 const closeAdd = document.querySelector(".popup__add_close-button");
