@@ -59,9 +59,10 @@ function handleAddFormSubmit(evt) {
     newTitle.textContent = newData.name;
     newImage.src = newData.link;
 
-    //newLikeButton.addEventListener('click', () => {
-    //    newLikeButton.classList.toggle(".element__like-button_active");
-    //});
+    newLikeButton.addEventListener('click', () => {
+        newLikeButton.classList.toggle("element__like-button_active");
+        newLikeButton.classList.toggle("element__like-button");
+    });
 
     newTrashButton.addEventListener('click', () => {
         const listItem = newTrashButton.closest(".element");
@@ -116,11 +117,10 @@ initialCards.forEach((data) => {
     cardTitle.textContent = data.name;
     cardImage.style.backgroundImage = `url(${data.link})`;
 
-    // cardLikeButton.addEventListener('click', () => {
-    //      cardLikeButton.classList.toggle(".element__like-button_active");
-    //     cardLikeButton.classList.toggle(".element__like-button");
-    //    document.getElementsByClassName(".element__like-button").style.backgroundImage = url("../../../images/like-button_active.svg");
-    //});
+    cardLikeButton.addEventListener('click', () => {
+        cardLikeButton.classList.toggle("element__like-button_active");
+        cardLikeButton.classList.toggle("element__like-button");
+    });
 
     cardTrashButton.addEventListener('click', () => {
         const listItem = cardTrashButton.closest(".element");
