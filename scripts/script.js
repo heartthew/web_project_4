@@ -30,8 +30,9 @@ const imgTitle = formAdd.querySelector(".form__item_input_title");
 const image = formAdd.querySelector(".form__item_input_image");
 const profileName = profileInfo.querySelector(".profile__name");
 const profileOccupation = profileInfo.querySelector(".profile__occupation");
-const cardTitle = popupImg.querySelector(".popup__title");
-const cardImage = popupImg.querySelector(".popup__image");
+const fullTitle = popupImg.querySelector(".popup__title");
+const fullImage = popupImg.querySelector(".popup__image");
+
 
 function togglePopup(popup) {
     popup.classList.toggle("popup_opened");
@@ -65,10 +66,13 @@ function createCard(data) {
     });
 
     cardImage.addEventListener('click', () => {
-        cardImage.src = data.link;
-        cardTitle.textContent = data.name;
+        fullImage.src = data.link;
+        fullTitle.textContent = data.name;
         togglePopup(popupImg);
     });
+
+
+
     return cardElement;
 }
 
