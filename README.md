@@ -1,7 +1,7 @@
 # Around The U.S.
 
-## Displays and edits profile information for a travelogue.
+## Displays and edits profile information for a travelogue. Validates form data before accepting.
 
-### Uses HTML(grid, flex), JS(Forms, input, creating and deleting elements), and CSS(style, layout). 
+### Uses HTML(grid, flex), JS(Forms, input, creating and deleting elements, validation, key), and CSS(style, layout, error messaging). 
 
 #### https://heartthew.github.io/web_project_4/index.html 

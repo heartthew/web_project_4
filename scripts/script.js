@@ -7,6 +7,7 @@ const elements = document.querySelector('.elements');
 const formAdd = document.querySelector(".form_add");
 const formEdit = document.querySelector(".form_edit");
 const popup = document.querySelector(".popup");
+const popupOverlay = document.querySelector(".popup__container");
 const profileInfo = document.querySelector(".profile__info");
 
 // Open Buttons
@@ -36,6 +37,13 @@ const fullImage = popupImg.querySelector(".popup__image");
 
 function togglePopup(popup) {
     popup.classList.toggle("popup_opened");
+}
+
+function escHandler(evt) {
+    if (evt.key === "Escape") {
+        console.log('escape pressed');
+        togglePopup(popup);
+    }
 }
 
 function handleEditFormSubmit(evt) {
@@ -70,8 +78,6 @@ function createCard(data) {
         fullTitle.textContent = data.name;
         togglePopup(popupImg);
     });
-
-
 
     return cardElement;
 }
@@ -122,6 +128,7 @@ addButton.addEventListener("click", () => {
     togglePopup(popupAdd);
 });
 
+popup.addEventListener("keydown", escHandler);
 
 editButton.addEventListener("click", () => {
     person.value = profileName.textContent;
