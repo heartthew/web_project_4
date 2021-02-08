@@ -35,10 +35,13 @@ const fullTitle = popupImg.querySelector(".popup__title");
 const fullImage = popupImg.querySelector(".popup__image");
 
 
+function closePopup(popup) {
+    popup.classList.remove("popup_opened");
+}
+
 function togglePopup(popup) {
     popup.classList.toggle("popup_opened");
 }
-
 
 function handleEditFormSubmit(evt) {
     evt.preventDefault();
@@ -116,31 +119,27 @@ initialCards.forEach((data) => {
     elements.prepend(cardElement);
 });
 
-document.addEventListener('keyup', (e) => {
-    const key = e.key;
-    if (e.key === 'Escape') {
-        togglePopup(popupAdd);
-        togglePopup(popupEdit);
-        togglePopup(popupImg);
+document.addEventListener('keyup', (evt) => {
+    if (evt.key === 'Escape') {
+        closePopup(popupImg);
+        closePopup(popupEdit);
+        closePopup(popupAdd);
     }
 });
 
 popupImg.addEventListener("click", (evt) => {
-    console.log('clicked');
     if (evt.target === popupImg) {
         togglePopup(popupImg);
     }
 });
 
 popupEdit.addEventListener("click", (evt) => {
-    console.log('clicked');
     if (evt.target === popupEdit) {
         togglePopup(popupEdit);
     }
 });
 
 popupAdd.addEventListener("click", (evt) => {
-    console.log('clicked');
     if (evt.target === popupAdd) {
         togglePopup(popupAdd);
     }
