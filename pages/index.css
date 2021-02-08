@@ -13,4 +13,4 @@
 @import url(../blocks/popup/__error_visible/popup__error_visible.css);
 @import url(../blocks/element/__like-button_active/element__like-button_active.css);
 @import url(../blocks/form/__submit_disabled/form__submit_disabled.css);
-@import url(../blocks/form/_type_error/form_type_error.css);
+@import url(../blocks/form/__type_error/form__type_error.css);
