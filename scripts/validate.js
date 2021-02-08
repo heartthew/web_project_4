@@ -8,7 +8,7 @@ function showErrorMessage(input, form, { errorClass, inputErrorClass, ...rest })
 
 function hideErrorMessage(input, form, { errorClass, inputErrorClass, ...rest }) {
     const error = document.querySelector("#" + input.id + "-error");
-    /*error.textContent = "";*/
+    error.textContent = "";
 
     error.classList.remove(errorClass);
     input.classList.remove(inputErrorClass);
@@ -58,6 +58,6 @@ enableValidation({
     inputSelector: ".form__item",
     submitButtonSelector: ".form__submit",
     inactiveButtonClass: "form__submit_disabled",
-    inputErrorClass: "form__item_type_error",
+    inputErrorClass: "form_type_error",
     errorClass: "popup__error_visible"
 });

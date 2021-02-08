@@ -39,12 +39,6 @@ function togglePopup(popup) {
     popup.classList.toggle("popup_opened");
 }
 
-function escHandler(evt) {
-    if (evt.key === "Escape") {
-        console.log('escape pressed');
-        togglePopup(popup);
-    }
-}
 
 function handleEditFormSubmit(evt) {
     evt.preventDefault();
@@ -122,13 +116,41 @@ initialCards.forEach((data) => {
     elements.prepend(cardElement);
 });
 
+document.addEventListener('keyup', (e) => {
+    const key = e.key;
+    if (e.key === 'Escape') {
+        togglePopup(popupAdd);
+        togglePopup(popupEdit);
+        togglePopup(popupImg);
+    }
+});
+
+popupImg.addEventListener("click", (evt) => {
+    console.log('clicked');
+    if (evt.target === popupImg) {
+        togglePopup(popupImg);
+    }
+});
+
+popupEdit.addEventListener("click", (evt) => {
+    console.log('clicked');
+    if (evt.target === popupEdit) {
+        togglePopup(popupEdit);
+    }
+});
+
+popupAdd.addEventListener("click", (evt) => {
+    console.log('clicked');
+    if (evt.target === popupAdd) {
+        togglePopup(popupAdd);
+    }
+});
+
 addButton.addEventListener("click", () => {
     imgTitle.value = "";
     image.value = "";
     togglePopup(popupAdd);
 });
-
-popup.addEventListener("keydown", escHandler);
 
 editButton.addEventListener("click", () => {
     person.value = profileName.textContent;
