@@ -34,20 +34,28 @@ const profileOccupation = profileInfo.querySelector(".profile__occupation");
 const fullTitle = popupImg.querySelector(".popup__title");
 const fullImage = popupImg.querySelector(".popup__image");
 
+function escHandler(evt) {
+    const currentPopup = document.querySelector(".popup_opened");
+    if (evt.key === 'Escape') {
+        closePopup(currentPopup);
+    }
+}
 
 function closePopup(popup) {
     popup.classList.remove("popup_opened");
+    document.removeEventListener('keyup', escHandler);
 }
 
-function togglePopup(popup) {
-    popup.classList.toggle("popup_opened");
+function openPopup(popup) {
+    popup.classList.add("popup_opened");
+    document.addEventListener('keyup', escHandler);
 }
 
 function handleEditFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = person.value;
     profileOccupation.textContent = job.value;
-    togglePopup(popupEdit);
+    closePopup(popupEdit);
 }
 
 function createCard(data) {
@@ -73,7 +81,7 @@ function createCard(data) {
     cardImage.addEventListener('click', () => {
         fullImage.src = data.link;
         fullTitle.textContent = data.name;
-        togglePopup(popupImg);
+        openPopup(popupImg);
     });
 
     return cardElement;
@@ -85,88 +93,54 @@ function handleAddFormSubmit(evt) {
     newData.link = image.value;
     const newElement = createCard(newData);
     elements.prepend(newElement);
-    togglePopup(popupAdd);
+    closePopup(popupAdd);
 }
-
-const initialCards = [{
-        name: "Yosemite Valley",
-        link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
-    },
-    {
-        name: "Lake Louise",
-        link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
-    },
-    {
-        name: "Bald Mountains",
-        link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
-    },
-    {
-        name: "Latemar",
-        link: "https://code.s3.yandex.net/web-code/latemar.jpg"
-    },
-    {
-        name: "Vanoise National Park",
-        link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
-    },
-    {
-        name: "Lago di Braies",
-        link: "https://code.s3.yandex.net/web-code/lago.jpg"
-    }
-];
 
 initialCards.forEach((data) => {
     const cardElement = createCard(data);
     elements.prepend(cardElement);
 });
 
-document.addEventListener('keyup', (evt) => {
-    if (evt.key === 'Escape') {
-        closePopup(popupImg);
-        closePopup(popupEdit);
-        closePopup(popupAdd);
-    }
-});
-
 popupImg.addEventListener("click", (evt) => {
     if (evt.target === popupImg) {
-        togglePopup(popupImg);
+        closePopup(popupImg);
     }
 });
 
 popupEdit.addEventListener("click", (evt) => {
     if (evt.target === popupEdit) {
-        togglePopup(popupEdit);
+        closePopup(popupEdit);
     }
 });
 
 popupAdd.addEventListener("click", (evt) => {
     if (evt.target === popupAdd) {
-        togglePopup(popupAdd);
+        closePopup(popupAdd);
     }
 });
 
 addButton.addEventListener("click", () => {
     imgTitle.value = "";
     image.value = "";
-    togglePopup(popupAdd);
+    openPopup(popupAdd);
 });
 
 editButton.addEventListener("click", () => {
     person.value = profileName.textContent;
     job.value = profileOccupation.textContent;
-    togglePopup(popupEdit);
+    openPopup(popupEdit);
 });
 
 closeAdd.addEventListener("click", () => {
-    togglePopup(popupAdd);
+    closePopup(popupAdd);
 });
 
 closeEdit.addEventListener("click", () => {
-    togglePopup(popupEdit);
+    closePopup(popupEdit);
 });
 
 closeImg.addEventListener("click", () => {
-    togglePopup(popupImg);
+    closePopup(popupImg);
 });
 
 formAdd.addEventListener("submit", handleAddFormSubmit);
