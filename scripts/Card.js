@@ -8,7 +8,6 @@ class Card {
         this._link = data.link;
         this._name = data.name;
         this._template = template;
-
     }
 
     _handleImage() {
@@ -18,20 +17,18 @@ class Card {
         openPopup(popupImage);
     }
 
-    _getCardTemplate() {
-        const cardTemplate = document.querySelector(".element-template").content.querySelector(".element");
-        return cardTemplate;
-    }
-
     _handleLike() {
-        const cardLikeButton = document.querySelector(".element__like-button");
+        const cardLikeButton = this._card.querySelector(".element__like-button");
         cardLikeButton.classList.toggle("element__like-button_active");
     }
 
     _handleTrash() {
-        const cardTrashButton = document.querySelector(".element__trash-button");
-        const listItem = cardTrashButton.closest(".element");
-        listItem.remove();
+        this._card.remove();
+    }
+
+    _getCardTemplate() {
+        const cardTemplate = document.querySelector(".element-template").content.querySelector(".element");
+        return cardTemplate;
     }
 
     _setEventListeners() {
@@ -39,14 +36,13 @@ class Card {
         const cardTrashButton = this._card.querySelector(".element__trash-button");
         const cardImage = this._card.querySelector(".element__image");
 
-        cardLikeButton.addEventListener('click', this._handleLike);
-        cardTrashButton.addEventListener('click', this._handleTrash);
-        cardImage.addEventListener('click', this._handleImage);
+        cardLikeButton.addEventListener('click', () => this._handleLike());
+        cardTrashButton.addEventListener('click', () => this._handleTrash());
+        cardImage.addEventListener('click', () => this._handleImage());
     }
 
     createCard() {
         this._card = this._getCardTemplate().cloneNode(true);
-
         const cardImage = this._card.querySelector(".element__image");
         const cardTitle = this._card.querySelector(".element__title");
 
@@ -55,7 +51,6 @@ class Card {
         cardImage.alt = this._name;
 
         this._setEventListeners();
-
         return this._card;
     }
 }

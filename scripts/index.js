@@ -1,7 +1,7 @@
 import FormValidator from './FormValidator.js';
 import Card from './Card.js';
 import { popupImage, openPopup, closePopup } from "./utils.js";
-import { starterCards } from "./initialize.js";
+import { startCards } from "./initialize.js";
 
 const defaultConfig = {
     formSelector: ".form",
@@ -11,41 +11,33 @@ const defaultConfig = {
     inputErrorClass: "form__type-error",
     errorClass: "popup__error_visible"
 }
-
+const profileInfo = document.querySelector(".profile__info");
+const profileName = profileInfo.querySelector(".profile__name");
+const profileOccupation = profileInfo.querySelector(".profile__occupation");
 // Wrappers
 const popupEdit = document.querySelector(".popup_type_edit");
 const popupAdd = document.querySelector(".popup_type_add");
 const elements = document.querySelector('.elements');
-
 // Forms
 const formAdd = document.querySelector(".form_add");
 const formEdit = document.querySelector(".form_edit");
-
 // Inputs
 const person = formEdit.querySelector(".form__item_input_name");
 const job = formEdit.querySelector(".form__item_input_job");
 const imgTitle = formAdd.querySelector(".form__item_input_title");
 const image = formAdd.querySelector(".form__item_input_image");
-
 // Open Buttons
 const editButton = document.querySelector(".profile__edit-button");
 const addButton = document.querySelector(".profile__add-button");
-
 // Close Buttons
 const closeAdd = document.querySelector(".popup__close-button_type_add");
 const closeEdit = document.querySelector(".popup__close-button_type_edit");
 const closeImg = document.querySelector(".popup__close-button_type_full");
-
-const profileInfo = document.querySelector(".profile__info");
-const profileName = profileInfo.querySelector(".profile__name");
-const profileOccupation = profileInfo.querySelector(".profile__occupation");
-
+// New Card
 const newData = [{
     name: "",
     link: ""
 }, ];
-
-
 // Validators
 const editFormValidator = new FormValidator(defaultConfig, formEdit);
 const addFormValidator = new FormValidator(defaultConfig, formAdd);
@@ -53,15 +45,10 @@ const addFormValidator = new FormValidator(defaultConfig, formAdd);
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
 
-const renderCard = (data, wrap) => {
-    const card = new Card(data, ".element-template");
-    wrap.prepend(card.createCard());
-};
-
-starterCards.forEach(data => {
+const renderCard = (data) => {
     const card = new Card(data, ".element-template");
     elements.prepend(card.createCard());
-});
+};
 
 const handleAddFormSubmit = (evt) => {
     evt.preventDefault();
@@ -77,6 +64,11 @@ const handleEditFormSubmit = (evt) => {
     profileOccupation.textContent = job.value;
     closePopup(popupEdit);
 };
+
+startCards.forEach(data => {
+    const card = new Card(data, ".element-template");
+    elements.append(card.createCard());
+});
 
 popupImage.addEventListener("click", (evt) => {
     if (evt.target === popupImage) {

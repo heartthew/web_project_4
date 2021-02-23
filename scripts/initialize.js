@@ -1,4 +1,4 @@
-const starterCards = [{
+const startCards = [{
         name: "This Aisle",
         link: "https://scontent-bos3-1.xx.fbcdn.net/v/t1.0-9/94779931_10217154050903814_2958008418444509184_n.jpg?_nc_cat=107&ccb=3&_nc_sid=19026a&_nc_ohc=Xy19SZ2EtuYAX9pGVrk&_nc_ht=scontent-bos3-1.xx&oh=eaeb55d0142f43f527cf9824033b779f&oe=6054DCE4"
     },
@@ -24,4 +24,4 @@ const starterCards = [{
     }
 ];
 
-export { starterCards };
+export { startCards };
