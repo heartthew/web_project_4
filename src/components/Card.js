@@ -1,20 +1,12 @@
-import { popupImage, openPopup } from "./utils.js";
-
-const fullTitle = popupImage.querySelector(".popup__title");
-const fullImage = popupImage.querySelector(".popup__image");
+import PopupWithImage from "./PopupWithImage.js";
+import Popup from "./Popup.js";
 
 class Card {
-    constructor(data, template) {
+    constructor(data, handleCardClick, template) {
         this._link = data.link;
         this._name = data.name;
         this._template = template;
-    }
-
-    _handleImage() {
-        fullImage.src = this._link;
-        fullImage.alt = this._name;
-        fullTitle.textContent = this._name;
-        openPopup(popupImage);
+        this._handleCardClick = handleCardClick;
     }
 
     _handleLike() {
@@ -24,6 +16,7 @@ class Card {
 
     _handleTrash() {
         this._card.remove();
+        this._card = null;
     }
 
     _getCardTemplate() {
@@ -38,7 +31,7 @@ class Card {
 
         cardLikeButton.addEventListener('click', () => this._handleLike());
         cardTrashButton.addEventListener('click', () => this._handleTrash());
-        cardImage.addEventListener('click', () => this._handleImage());
+        cardImage.addEventListener('click', () => this._handleCardClick(this.text, this.link));
     }
 
     createCard() {
