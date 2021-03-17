@@ -1,8 +1,8 @@
 import PopupWithImage from "./PopupWithImage.js";
 import Popup from "./Popup.js";
 
-class Card {
-    constructor(data, handleCardClick, template) {
+export default class Card {
+    constructor({ data, handleCardClick }, template) {
         this._link = data.link;
         this._name = data.name;
         this._template = template;
@@ -20,8 +20,8 @@ class Card {
     }
 
     _getCardTemplate() {
-        const cardTemplate = document.querySelector(".element-template").content.querySelector(".element");
-        return cardTemplate;
+        this._cardTemplate = document.querySelector(".element-template").content.querySelector(".element");
+        return this._cardTemplate;
     }
 
     _setEventListeners() {
@@ -31,7 +31,7 @@ class Card {
 
         cardLikeButton.addEventListener('click', () => this._handleLike());
         cardTrashButton.addEventListener('click', () => this._handleTrash());
-        cardImage.addEventListener('click', () => this._handleCardClick(this.text, this.link));
+        cardImage.addEventListener('click', () => this._handleCardClick(this._name, this._link));
     }
 
     createCard() {
@@ -47,5 +47,3 @@ class Card {
         return this._card;
     }
 }
-
-export default Card;

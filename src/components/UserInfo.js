@@ -1,33 +1,22 @@
 export default class UserInfo {
-    constructor({ data }) { // profile name n job
-        this._username = data.person; // rename suffix accordingly
-        this._userjob = data.job; // rename suffix accordingly
+    constructor({ person, job }) {
+        this._person = person;
+        this._job = job;
+        this._name = document.querySelector("profile__name");
+        this._description = document.querySelector("profile__occupation");
     }
 
     getUserInfo() {
-        const user = {
-            profileName: document.querySelector('.profile__name'),
-            profileOccupation: document.querySelector('.profile__occupation')
-        }
-        return user;
+        return { name: this._name.innerText, description: this._description.innerText };
+
     }
 
-    setUserInfo(newUser) {
-        const person = formEdit.querySelector('.form__item_input_name');
-        const job = formEdit.querySelector('.form__item_input_job');
-        newUser.profileName.textContent = person.value;
-        newUser.profileOccupation.textContent = job.value;
+    setUserInfo(person, job) {
+        this._name.textContent = person;
+        this._description.textContent = job;
     }
 
 }
-
-/* const handleAddFormSubmit = (evt) => {
-    evt.preventDefault();
-    newData.name = imgTitle.value;
-    newData.link = image.value;
-    renderCard(newData, elements);
-    close(popupAdd);
-}; */
 
 /* 
 _getInputValues() {
@@ -39,10 +28,3 @@ _getInputValues() {
     });
     return this._formValues;
 } */
-
-/* const handleEditFormSubmit = (evt) => {
-    evt.preventDefault();
-    profileName.textContent = person.value;
-    profileOccupation.textContent = job.value;
-    closePopup(popupEdit);
-}; */
