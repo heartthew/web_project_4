@@ -33,19 +33,3 @@ export default class Popup {
         });
     }
 }
-
-/* popupEdit.addEventListener('click', (evt) => {
-    if (evt.target === popupEdit) {
-        popupEdit.close();
-    }
-});
-popupAdd.addEventListener('click', (evt) => {
-    if (evt.target === popupAdd) {
-        popupAdd.close();
-    }
-});
-popupImage.addEventListener('click', (evt) => {
-    if (evt.target === popupImage) {
-        popupImage.close();
-    }
-}); */

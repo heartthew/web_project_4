@@ -7,6 +7,8 @@ export default class UserInfo {
     }
 
     getUserInfo() {
+        console.log(this._person, this._name);
+
         return { name: this._name.innerText, description: this._description.innerText };
 
     }
@@ -14,6 +16,7 @@ export default class UserInfo {
     setUserInfo(person, job) {
         this._name.textContent = person;
         this._description.textContent = job;
+        console.log(this.name, this._job);
     }
 
 }

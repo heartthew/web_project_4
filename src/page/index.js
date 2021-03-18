@@ -44,30 +44,7 @@ const addFormValidator = new FormValidator(defaultConfig, formAdd);
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
 
-// Popups
-const popupEdit = new PopupWithForm('.popup_type_edit', handleEditFormSubmit);
-const popupAdd = new PopupWithForm('.popup_type_add', handleAddFormSubmit);
-const popupImage = new PopupWithImage('.popup_type_image');
-popupEdit.setEventListeners();
-popupAdd.setEventListeners();
-popupImage.setEventListeners();
-
-const handleAddFormSubmit = (evt) => {
-    evt.preventDefault();
-    newData.name = imgTitle.value;
-    newData.link = image.value;
-    const cardElement = newData.createCard();
-    cards.addItem(cardElement);
-    popupAdd.close();
-};
-const handleEditFormSubmit = (evt) => {
-    evt.preventDefault();
-    userInfo.person = person.value;
-    userInfo.job = job.value;
-    userInfo.setUserInfo(userInfo.person, userInfo.job);
-    popupEdit.close();
-};
-
+// Initialize
 const cards = new Section({
         items: startCards,
         renderer: (cardItem) => {
@@ -89,8 +66,40 @@ const cards = new Section({
 );
 cards.renderItems();
 
-formAdd.addEventListener('submit', handleAddFormSubmit);
-formEdit.addEventListener('submit', handleEditFormSubmit);
+// Popups
+const popupEdit = new PopupWithForm({
+    popupElement: '.popup_type_edit',
+    handleFormSubmit: (data) => {
+        console.log("data", data);
+        userInfo.setUserInfo(userInfo.person, userInfo.job);
+        popupEdit.close();
+    }
+});
+
+const popupAdd = new PopupWithForm({
+    popupElement: '.popup_type_add',
+    handleFormSubmit: (newData) => {
+        const newCard = new Card({
+                data: newData,
+                handleCardClick: () => {
+                    fullImage.src = cardItem.link;
+                    fullImage.alt = cardItem.name;
+                    fullTitle.textContent = cardItem.name;
+                    popupImage.open(cardItem.link, cardItem.name);
+                }
+            },
+            elements);
+        console.log("data", newData);
+        const cardElement = newCard.createCard();
+        cards.addItem(cardElement);
+        popupAdd.close();
+    }
+});
+
+const popupImage = new PopupWithImage('.popup_type_image');
+popupEdit.setEventListeners();
+popupAdd.setEventListeners();
+popupImage.setEventListeners();
 
 addButton.addEventListener('click', () => {
     imgTitle.value = '';
