@@ -1,6 +1,3 @@
-import PopupWithImage from "./PopupWithImage.js";
-import Popup from "./Popup.js";
-
 export default class Card {
     constructor({ data, handleCardClick }, template) {
         this._link = data.link;
