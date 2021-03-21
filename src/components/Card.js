@@ -17,7 +17,8 @@ export default class Card {
     }
 
     _getCardTemplate() {
-        this._cardTemplate = document.querySelector(".element-template").content.querySelector(".element");
+        console.log(this._template);
+        this._cardTemplate = document.querySelector(this._template).content.querySelector(".element");
         return this._cardTemplate;
     }
 
