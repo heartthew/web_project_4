@@ -4,7 +4,6 @@
 @import url(__submit/form__submit.css);
 @import url(__submit_disabled/form__submit_disabled.css);
 @import url(_type-error/form_type-error.css);
-@import url(_no-inputs/form_no-inputs.css);
 .form {
     display: flex;
     width: 430px;
