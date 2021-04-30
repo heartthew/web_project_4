@@ -10,7 +10,3 @@
 @import url(/src/styles/blocks/popup/popup.css);
 @import url(/src/styles/blocks/footer/footer.css);
 @import url(/src/styles/blocks/popup/_opened/popup_opened.css);
-@import url(/src/styles/blocks/popup/__error_visible/popup__error_visible.css);
-@import url(/src/styles/blocks/element/__like-button_active/element__like-button_active.css);
-@import url(/src/styles/blocks/form/__submit_disabled/form__submit_disabled.css);
-@import url(/src/styles/blocks/form/_type-error/form_type-error.css);

@@ -17,13 +17,14 @@
         </header>
         <main class="content">
             <section class="profile">
-                <img class="profile__avatar" src="<%=require('./images/cousteau.png')%>" alt="Not Jimmy Hoffa">
+                <img class="profile__avatar" src="#" alt="Profile Avatar">
+                <img class="profile__avatar-button" src="<%=require('./images/edit-profile.svg')%>" alt="Edit Avatar Button">
                 <div class="profile__info">
                     <div class="profile__container">
-                        <h1 class="profile__name">Jimmy Hoffa</h1>
+                        <h1 class="profile__name"></h1>
                         <button class="profile__edit-button" aria-label="Edit" type="button"></button>
                     </div>
-                    <h2 class="profile__occupation">Cement Shoe Salesman</h2>
+                    <h2 class="profile__occupation"></h2>
                 </div>
                 <button class="profile__add-button" aria-label="Add" type="button"></button>
             </section>
@@ -41,17 +42,30 @@
                 </figure>
             </div>
         </div>
+        <div class="popup popup_type_avatar" id="avatar-popup">
+            <div class="popup__container">
+                <button class="popup__close-button popup__close-button_type_avatar" aria-label="Close" type="button"></button>
+                <form class="form form_avatar" name="Change profile picture">
+                    <fieldset class="form__input-container">
+                        <h2 class="form__label">Change profile picture</h2>
+                        <input class="form__item form__item_input_image" id="image-link" required name="link" placeholder="Image link" type="url">
+                        <span class="form__type-error" id="image-link-error"></span>
+                        <button class="form__submit" id="edit-save" value="Save" type="submit">Save</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
         <div class="popup popup_type_edit" id="edit-popup">
             <div class="popup__container">
                 <button class="popup__close-button popup__close-button_type_edit" aria-label="Close" type="button"></button>
                 <form class="form form_edit" name="Edit Profile">
                     <fieldset class="form__input-container">
                         <h2 class="form__label">Edit Profile</h2>
-                        <input class="form__item form__item_input_name" id="profile-name" required minlength="2" maxlength="40" name="person" placeholder="Name" type="text">
-                        <span class="form__type-error" id="profile-name-error"></span>
+                        <input class="form__item form__item_input_name" id="user" required minlength="2" maxlength="40" name="user" placeholder="Name" type="text">
+                        <span class="form__type-error" id="user-error"></span>
                         <input class="form__item form__item_input_job" id="job" required minlength="2" maxlength="200" name="job" placeholder="Occupation" type="text">
                         <span class="form__type-error" id="job-error"></span>
-                        <button class="form__submit" id="edit-save" type="submit">Save</button>
+                        <button class="form__submit" id="edit-save" value="Save" type="submit">Save</button>
                     </fieldset>
                 </form>
             </div>
@@ -66,9 +80,20 @@
                         <span class="form__type-error" id="title-error"></span>
                         <input class="form__item form__item_input_image" id="image-link" required name="link" placeholder="Image link" type="url">
                         <span class="form__type-error" id="image-link-error"></span>
-                        <button class="form__submit" id="add-save" type="submit">Create</button>
+                        <button class="form__submit" id="add-save" value="Create" type="submit">Create</button>
                     </fieldset>
                 </form>
+            </div>
+        </div>
+        <div class="popup popup_type_confirm" id="confirm-popup">
+            <div class="popup__container">
+                <button class="popup__close-button popup__close-button_type_confirm" aria-label="Close" type="button"></button>
+                <fieldset class="form__input-container">
+                    <form class="form form_confirm" name="Are You Sure?"></form>
+                    <h2 class="form__label form_no-inputs">Are you sure?</h2>
+                    <button class="form__submit" id="confirm-delete" value="Yes" type="submit">Yes</button>
+                    </form>
+                </fieldset>
             </div>
         </div>
         <template class="element-template">
@@ -77,7 +102,10 @@
                 <div class="element__image"></div>
                 <div class="element__label">
                     <h2 class="element__title"></h2>
-                    <button class="element__like-button" aria-label="Like" type="button"></button>
+                    <div class="element__likes">
+                        <button class="element__like-button" aria-label="Like" type="button"></button>
+                        <p class="element__like-tally">0</p>
+                    </div>
                 </div>
             </div>
         </template>
