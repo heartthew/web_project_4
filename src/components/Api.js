@@ -4,30 +4,25 @@ export default class Api {
         this._headers = headers;
     }
 
+    _checkResponse(res) {
+        if (res.ok) {
+            return res.json();
+        }
+        return Promise.reject(`Error: ${res.status}`);
+    }
+
     getInitialCards() {
         return fetch(this._baseUrl + "/cards", {
                 headers: this._headers
             })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Error: ${res.status}`);
-            })
-            .catch(err => console.log(err));
+            .then(res => this._checkResponse(res))
     }
 
     getUserInfo() {
         return fetch(this._baseUrl + "/users/me", {
                 headers: this._headers
             })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Error: ${res.status}`);
-            })
-            .catch(err => console.log(err));
+            .then(res => this._checkResponse(res))
     }
 
     setUserInfo({ name, about }) {
@@ -39,8 +34,8 @@ export default class Api {
                     about
                 })
             })
-            .then(res => res.ok ? res.json() : Promise.reject("Error   " + res.statusText))
-            .catch(err => console.log(err))
+            .then(res => this._checkResponse(res))
+
     }
 
     setAvatar(avatar) {
@@ -51,8 +46,7 @@ export default class Api {
                     avatar
                 })
             })
-            .then(res => res.ok ? res.json() : Promise.reject("Error   " + res.statusText))
-            .catch(err => console.log(err))
+            .then(res => this._checkResponse(res))
     }
 
     addCard({ name, link }) {
@@ -64,8 +58,7 @@ export default class Api {
                     link
                 })
             })
-            .then(res => res.ok ? res.json() : Promise.reject("Error   " + res.statusText))
-            .catch(err => console.log(err))
+            .then(res => this._checkResponse(res))
     }
 
     deleteCard(cardId) {
@@ -73,8 +66,7 @@ export default class Api {
                 headers: this._headers,
                 method: "DELETE",
             })
-            .then(res => res.ok ? res.json() : Promise.reject("Error   " + res.statusText))
-            .catch(err => console.log(err))
+            .then(res => this._checkResponse(res))
     }
 
     addLike(cardId) {
@@ -82,7 +74,7 @@ export default class Api {
                 method: "PUT",
                 headers: this._headers
             })
-            .then(res => res.ok ? res.json() : Promise.reject(new Error(res.statusText)));
+            .then(res => this._checkResponse(res))
     }
 
     removeLike(cardId) {
@@ -90,6 +82,6 @@ export default class Api {
                 method: "DELETE",
                 headers: this._headers
             })
-            .then(res => res.ok ? res.json() : Promise.reject(new Error(res.statusText)));
+            .then(res => this._checkResponse(res))
     }
 }

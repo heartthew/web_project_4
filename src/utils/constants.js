@@ -15,7 +15,6 @@ const avatarButton = document.querySelector('.profile__avatar-button');
 const formAdd = document.querySelector('.form_add');
 const formEdit = document.querySelector('.form_edit');
 const formAvatar = document.querySelector('.form_avatar');
-const formConfirm = document.querySelector('.form_confirm');
 
 // Inputs
 const person = formEdit.querySelector('.form__item_input_name');
@@ -23,4 +22,4 @@ const job = formEdit.querySelector('.form__item_input_job');
 // Avatar
 const avatar = document.querySelector('.profile__avatar');
 
-export { defaultConfig, editButton, addButton, avatarButton, formAdd, formEdit, formAvatar, formConfirm, person, job, avatar };
+export { defaultConfig, editButton, addButton, avatarButton, formAdd, formEdit, formAvatar, person, job, avatar };

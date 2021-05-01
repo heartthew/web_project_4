@@ -14,12 +14,25 @@ import {
     formAdd,
     formEdit,
     formAvatar,
-    formConfirm,
     person,
     job,
     avatar
-} from "../utils.js";
+} from "../utils/constants.js";
 import "./index.css";
+
+const api = new Api({
+    baseUrl: "https://around.nomoreparties.co/v1/group-7",
+    headers: {
+        authorization: "cd1cfdf8-4aa7-46c5-9465-44c7c15c403b",
+        "Content-Type": "application/json"
+    }
+});
+
+const userInfo = new UserInfo({
+    personSelector: ".profile__name",
+    jobSelector: ".profile__occupation",
+    avatarSelector: ".profile__avatar"
+});
 
 function makeCard(items) {
     const card = new Card({
@@ -40,31 +53,15 @@ function makeCard(items) {
     return card.createCard(userInfo.id);
 }
 
-const api = new Api({
-    baseUrl: "https://around.nomoreparties.co/v1/group-7",
-    headers: {
-        authorization: "cd1cfdf8-4aa7-46c5-9465-44c7c15c403b",
-        "Content-Type": "application/json"
-    }
-});
-
-const userInfo = new UserInfo({
-    personSelector: ".profile__name",
-    jobSelector: ".profile__occupation",
-    avatarSelector: ".profile__avatar"
-});
-
-api.getUserInfo()
-    .then((res) => {
-        userInfo.setUserInfo(res.name, res.about, res._id);
-        userInfo.setAvatar(res.avatar);
-    })
-    .catch((err) => console.log("err", err));
-
-api.getInitialCards()
-    .then(res => {
+Promise.all([
+        api.getUserInfo(),
+        api.getInitialCards()
+    ])
+    .then(([person, places]) => {
+        userInfo.setUserInfo(person.name, person.about, person._id);
+        userInfo.setAvatar(person.avatar);
         const cards = new Section({
-            items: res,
+            items: places,
             renderer: (cardItem) => {
                 cards.addItem(makeCard(cardItem));
             }
@@ -85,8 +82,9 @@ api.getInitialCards()
         addButton.addEventListener("click", () => {
             popupAdd.open();
         });
-        popupImage.setEventListeners();
-    });
+    })
+    .catch((err) => console.log("err", err));
+
 
 
 const popupEdit = new PopupWithForm({
@@ -94,9 +92,10 @@ const popupEdit = new PopupWithForm({
     handleFormSubmit: (newUser) => {
         return api.setUserInfo({ name: newUser.user, about: newUser.job })
             .then(newUser => {
-                userInfo.setUserInfo(newUser.name, newUser.about);
+                userInfo.setUserInfo(newUser.name, newUser.about, newUser._id);
                 popupEdit.close();
-            });
+            })
+            .catch((err) => console.log("err", err));
     }
 });
 
@@ -113,7 +112,7 @@ const popupAvatar = new PopupWithForm({
     handleFormSubmit: (imageLink) => {
         return api.setAvatar(imageLink.link)
             .then((res) => {
-                avatar.src = res.avatar;
+                userInfo.setAvatar(res.avatar);
                 popupAvatar.close();
             })
             .catch((err) => console.log("err", err));
@@ -126,14 +125,13 @@ avatarButton.addEventListener("click", () => {
 
 const popupImage = new PopupWithImage(".popup_type_image");
 const popupConfirm = new PopupConfirm(".popup_type_confirm");
+popupImage.setEventListeners();
 popupConfirm.setEventListeners();
 
 // Enable Validators
 const editFormValidator = new FormValidator(defaultConfig, formEdit);
 const addFormValidator = new FormValidator(defaultConfig, formAdd);
 const avatarFormValidator = new FormValidator(defaultConfig, formAvatar);
-const confirmFormValidator = new FormValidator(defaultConfig, formConfirm);
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
 avatarFormValidator.enableValidation();
-confirmFormValidator.enableValidation();
