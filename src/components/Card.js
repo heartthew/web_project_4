@@ -53,15 +53,23 @@ export default class Card {
 
         const likeButton = this._card.querySelector(".element__like-button");
         likeButton.addEventListener("click", () => {
-            this._handleLike();
             if (this._ownerLike(userId)) {
-                this._api.removeLike(this._id);
-                this._likes = this._likes.filter((like) => like._id !== userId);
+                this._api.removeLike(this._id)
+                    .then((res) => {
+                        this._likes = res.likes;
+                        this._handleLike();
+                        this._tallyLikes();
+                    })
+                    .catch((err) => console.log(err));
             } else {
-                this._api.addLike(this._id);
-                this._likes.push({ _id: userId });
+                this._api.addLike(this._id)
+                    .then((res) => {
+                        this._likes = res.likes;
+                        this._handleLike();
+                        this._tallyLikes();
+                    })
+                    .catch((err) => console.log(err));
             };
-            this._tallyLikes();
         });
 
         this._card.querySelector(".element__image")

@@ -43,6 +43,12 @@ class FormValidator {
                 this._toggleButtonState(inputs, button);
             })
         })
+        this._form.addEventListener('reset', () => {
+            inputs.forEach((input) => {
+                this._hideErrorMessage(input)
+            })
+            this._toggleButtonState(inputs, button);
+        });
     }
 
     _hasInvalidInput(inputs) {

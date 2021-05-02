@@ -19,7 +19,5 @@ const formAvatar = document.querySelector('.form_avatar');
 // Inputs
 const person = formEdit.querySelector('.form__item_input_name');
 const job = formEdit.querySelector('.form__item_input_job');
-// Avatar
-const avatar = document.querySelector('.profile__avatar');
 
-export { defaultConfig, editButton, addButton, avatarButton, formAdd, formEdit, formAvatar, person, job, avatar };
+export { defaultConfig, editButton, addButton, avatarButton, formAdd, formEdit, formAvatar, person, job };

@@ -15,8 +15,7 @@ import {
     formEdit,
     formAvatar,
     person,
-    job,
-    avatar
+    job
 } from "../utils/constants.js";
 import "./index.css";
 
@@ -80,6 +79,7 @@ Promise.all([
         });
         popupAdd.setEventListeners();
         addButton.addEventListener("click", () => {
+
             popupAdd.open();
         });
     })
@@ -102,9 +102,9 @@ const popupEdit = new PopupWithForm({
 popupEdit.setEventListeners();
 editButton.addEventListener("click", () => {
     const fillUser = userInfo.getUserInfo();
+    popupEdit.open();
     person.value = fillUser.name;
     job.value = fillUser.about;
-    popupEdit.open();
 });
 
 const popupAvatar = new PopupWithForm({
